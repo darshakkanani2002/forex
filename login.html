@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Login</title>
+    <!-- Bootstaro Cdn Link -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Swiper js Cdn Link -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .form-select option {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-select option img {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body class="py-4 dark-mode">
+    <div class="container">
+        <div class="height-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-7 col-lg-5">
+                    <div class="text-center mb-4 position-relative">
+                        <a class="navbar-brand" href="#"><img src="./img/FOREX-Login.svg" alt="logo" class="img-fluid">
+                        </a>
+                        <div class="d-flex position-absolute top-0 end-0 d-none">
+                            <div class="navbar-dark ">
+                                <button id="toggle-mode" class="btn btn-light-mode">
+                                    <i class="fas fa-sun"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-section-bg hero-dark-mode login-mode navbar-dark ">
+                        <div class="">
+                            <ul class="nav login-nav-link justify-content-center" id="pills-tab" role="tablist">
+                                <div class="row w-100">
+                                    <div class="col-6 p-0">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active login-btn text-white rounded px-4 py-3 w-100"
+                                                id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                                                type="button" role="tab" aria-controls="pills-home"
+                                                aria-selected="true">Login</button>
+                                        </li>
+                                    </div>
+
+                                    <div class="col-6 p-0">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link login-btn text-white rounded px-4 py-3 w-100"
+                                                id="pills-profile-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-profile" type="button" role="tab"
+                                                aria-controls="pills-profile" aria-selected="false">Register</button>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="tab-content position-relative w-100" id="pills-tabContent">
+                                <!-- --------------------------------------------------- Login Form ---------------------------------- -->
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                    <form>
+                                        <div class="form-info">
+                                            <div class="mb-5">
+                                                <label for="email" class="text-white">Email<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="email" class="form-control text-off-white" id="email"
+                                                    placeholder="Enter Your Email">
+                                            </div>
+                                            <div class="mb-4 position-relative">
+                                                <label for="password" class="text-white">Password <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="password" class="form-control text-off-white"
+                                                    id="login-password" placeholder="Enter Your Password" required>
+                                                <span
+                                                    class=" togglePassword position-absolute end-0 translate-middle-y me-3">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </span>
+                                                <a href="#">
+                                                    <h6 class="text-white text-end my-2">Forgot password?</h6>
+                                                </a>
+                                            </div>
+                                            <div class="text-center">
+                                                <a href="/" class="btn btn-primary px-5 submit-btn text-white">
+                                                    Login
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        <div class="row">
+                                            <div class="col-12 text-center">
+                                                <h2 class="text-white">Login With</h2>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-center">
+                                                    <div>
+                                                        <ul
+                                                            class="d-flex gap-lg-3 gap-md-3 gap-sm-3 gap-3 list-unstyled footer-social-icon">
+                                                            <li><a href="#"><img src="./img/footer-fb-ic-01.svg"
+                                                                        alt="footer-fb-ic-01" class="img-fluid"></a>
+                                                            </li>
+                                                            <li><a href="#"><img src="./img/footer-insta-ic-02.svg"
+                                                                        alt="footer-fb-ic-02" class="img-fluid"></a>
+                                                            </li>
+                                                            <li><a href="#"><img src="./img/footer-twitter-ic-03.svg"
+                                                                        alt="footer-twitter-ic-03"
+                                                                        class="img-fluid"></a></li>
+                                                            <li><a href="#"><img src="./img/footer-pinterest-ic-04.svg"
+                                                                        alt="footer-pinterest-ic-04"
+                                                                        class="img-fluid"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- --------------------------------------------------- Register Form ---------------------------------- -->
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab" tabindex="0">
+                                    <form>
+                                        <div class="form-info">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label for="name" class="text-white">Your Full Name<span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" id="name"
+                                                            placeholder="Enter Your Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label for="email" class="text-white">Email<span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="Enter Your Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label for="accountno" class="text-white">Account No.<span
+                                                                class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" id="accountno"
+                                                            placeholder="Enter Your Account No.">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <label for="email" class="text-white">Mobile No.<span
+                                                            class="text-danger">*</span></label>
+                                                    <div class="input-group flex-nowrap">
+                                                        <div class="country-code-dropdown">
+                                                            <button class="btn dropdown-toggle border-0 text-white"
+                                                                type="button" id="countryDropdown"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <img id="selectedFlag" src="https://flagcdn.com/us.svg"
+                                                                    alt="United States" width="20" height="15"
+                                                                    style="margin-right: 10px;"> +1
+                                                            </button>
+                                                            <ul class="dropdown-menu" id="countryDropdownMenu"
+                                                                aria-labelledby="countryDropdown"></ul>
+                                                        </div>
+                                                        <input type="tel"
+                                                            class="form-control country-code-input py-2 rounded-2"
+                                                            id="contactNumber" placeholder="Enter Your Mobile Number">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="mb-3 position-relative">
+                                                        <label for="password" class="text-white">Password</label>
+                                                        <input type="password" class="form-control"
+                                                            id="register-password" placeholder="Enter Your Password">
+                                                        <span class="togglePassword position-absolute end-0 me-2">
+                                                            <i class="fa-regular fa-eye"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="mb-5 position-relative">
+                                                        <label for="confirm-password" class="text-white">Confirm
+                                                            Password</label>
+                                                        <input type="password" class="form-control"
+                                                            id="confirm-password" placeholder="Re-type Password">
+                                                        <span class="togglePassword position-absolute end-0 me-2">
+                                                            <i class="fa-regular fa-eye"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="text-center">
+                                                        <button type="submit"
+                                                            class="btn btn-primary px-5 submit-btn">Register</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Cdn Link -->
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script>
+        // =======7-12-2024=======harsh
+
+        //-------show password---------- login page--------------
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const togglePasswordButtons = document.querySelectorAll('.togglePassword'); // Select all toggle buttons
+
+            togglePasswordButtons.forEach((togglePassword) => {
+                togglePassword.addEventListener('click', function () {
+                    // Find the associated password input
+                    const passwordField = this.previousElementSibling; // Get the input field adjacent to the toggle button
+
+                    if (passwordField) {
+                        // Toggle the password visibility
+                        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordField.setAttribute('type', type);
+
+                        // Toggle the eye icon
+                        const icon = this.querySelector('i');
+                        if (icon) {
+                            if (type === 'text') {
+                                icon.className = 'fa-regular fa-eye-slash'; // Change to "eye-slash" when visible
+                            } else {
+                                icon.className = 'fa-regular fa-eye'; // Change to "eye" when hidden
+                            }
+                        }
+                    } else {
+                        console.error('Password input field not found');
+                    }
+                });
+            });
+
+        });
+
+
+
+        // =======8-12-2024=======harsh
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.login-nav-link button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            let activeTabIndex = 0; // Keep track of the current active tab index
+
+            // Function to remove active classes and handle animations
+            function switchTab(newIndex) {
+                const currentPane = tabPanes[activeTabIndex];
+                const newPane = tabPanes[newIndex];
+
+                // Determine sliding direction
+                if (newIndex > activeTabIndex) {
+                    currentPane.classList.add('slide-left');
+                    newPane.classList.add('slide-right');
+                } else {
+                    currentPane.classList.add('slide-right');
+                    newPane.classList.add('slide-left');
+                }
+
+                // After animation, set the active tab
+                setTimeout(() => {
+                    tabPanes.forEach((pane) => {
+                        pane.classList.remove('active', 'slide-left', 'slide-right');
+                    });
+                    newPane.classList.add('active');
+                    activeTabIndex = newIndex;
+                }, 400); // Match transition duration in CSS
+            }
+
+            // Attach click listeners to navigation links
+            navLinks.forEach((link, index) => {
+                link.addEventListener('click', () => {
+                    if (index !== activeTabIndex) {
+                        switchTab(index);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('.forex-nav-bar li a');
+
+        // Get the current page URL
+        const currentPath = window.location.pathname;
+
+        // Loop through all nav links and set the active class
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                // Remove active class from all links
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                // Add active class to the current link
+                link.classList.add('active');
+            }
+        });
+
+        $(document).ready(function () {
+            $('#toggle-mode').click(function () {
+                if ($('body').hasClass('dark-mode')) {
+                    // Switch to Light Mode
+                    $('body').removeClass('dark-mode').addClass('light-mode');
+                    $('.navigation').removeClass('navbar-dark').addClass('navbar-light');
+                    $('.hero-section-bg').removeClass('hero-dark-mode').addClass('hero-light-mode');
+                    $('.hero-section-content p').removeClass('hero-content-dark-mode').addClass('hero-content-light-mode');
+                    $('.text-off-white ').removeClass('text-off-dark-mode').addClass('text-off-light-mode');
+                    $('.text-white ').removeClass('text-off-dark-mode').addClass('text-off-light-mode');
+                    $('.our-team-name-bg ').removeClass('our-team-bg-dark-mode').addClass('our-team-bg-light-mode');
+                    $('.dropdown-content ').removeClass('dropdown-content-dark-mode').addClass('dropdown-content-light-mode');
+                    $('.form-info ').removeClass('form-info-dark').addClass('form-info-light');
+                    $('#toggle-mode')
+                        .removeClass('btn-light-mode')
+                        .addClass('btn-dark-mode')
+                        .html('<i class="fas fa-moon"></i>'); // Icon for dark mode
+                } else {
+                    // Switch to Dark Mode
+                    $('body').removeClass('light-mode').addClass('dark-mode');
+                    $('.navigation').removeClass('navbar-light').addClass('navbar-dark');
+                    $('.hero-section-bg').removeClass('hero-light-mode').addClass('hero-dark-mode');
+                    $('.hero-section-content p').removeClass('hero-content-light-mode').addClass('hero-content-dark-mode');
+                    $('.text-off-white ').removeClass('text-off-light-mode').addClass('text-off-dark-mode');
+                    $('.text-white ').removeClass('text-off-light-mode').addClass('text-off-dark-mode');
+                    $('.our-team-name-bg ').removeClass('our-team-bg-light-mode').addClass('our-team-bg-dark-mode');
+                    $('.dropdown-content ').removeClass('dropdown-content-light-mode').addClass('dropdown-content-dark-mode');
+                    $('.form-info ').removeClass('form-info-light').addClass('form-info-dark');
+                    $('#toggle-mode')
+                        .removeClass('btn-dark-mode')
+                        .addClass('btn-light-mode')
+                        .html('<i class="fas fa-sun"></i>'); // Icon for light mode
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
+
+            if (tab === 'register') {
+                // Activate the Register tab
+                const registerTab = document.getElementById('pills-profile-tab');
+                const loginTab = document.getElementById('pills-home-tab');
+
+                registerTab.classList.add('active');
+                registerTab.setAttribute('aria-selected', 'true');
+                loginTab.classList.remove('active');
+                loginTab.setAttribute('aria-selected', 'false');
+
+                const registerContent = document.getElementById('pills-profile');
+                const loginContent = document.getElementById('pills-home');
+
+                registerContent.classList.add('show', 'active');
+                loginContent.classList.remove('show', 'active');
+            }
+        });
+
+        const countryno = [
+            { name: "United States", code: "+1", flag: "https://flagcdn.com/us.svg" },
+            { name: "Canada", code: "+1", flag: "https://flagcdn.com/ca.svg" },
+            { name: "United Kingdom", code: "+44", flag: "https://flagcdn.com/gb.svg" },
+            { name: "India", code: "+91", flag: "https://flagcdn.com/in.svg" },
+            { name: "Australia", code: "+61", flag: "https://flagcdn.com/au.svg" },
+            { name: "Germany", code: "+49", flag: "https://flagcdn.com/de.svg" },
+            { name: "France", code: "+33", flag: "https://flagcdn.com/fr.svg" },
+            { name: "Japan", code: "+81", flag: "https://flagcdn.com/jp.svg" },
+            { name: "China", code: "+86", flag: "https://flagcdn.com/cn.svg" },
+            { name: "Brazil", code: "+55", flag: "https://flagcdn.com/br.svg" }
+        ];
+
+        // Populate the dropdown menu
+        const countryDropdownMenu = document.getElementById("countryDropdownMenu");
+        const selectedFlag = document.getElementById("selectedFlag");
+        const countryDropdown = document.getElementById("countryDropdown");
+        const contactInput = document.getElementById("contactNumber");
+
+        countryno.forEach(country => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `
+        <a class="dropdown-item" href="#" data-code="${country.code}" data-flag="${country.flag}">
+            <img src="${country.flag}" alt="${country.name}" width="20" height="15"> ${country.code}
+        </a>`;
+            countryDropdownMenu.appendChild(listItem);
+
+            // Add click event listener
+            listItem.addEventListener("click", function (event) {
+                event.preventDefault();
+                selectedFlag.src = country.flag;
+                selectedFlag.alt = country.name;
+                countryDropdown.innerHTML = `
+            <img id="selectedFlag" src="${country.flag}" alt="${country.name}" width="20" height="15"> ${country.code}
+        `;
+                contactInput.placeholder = `Enter Your Mobile Number`;
+            });
+        });
+
+
+    </script>
+
+
+
+
+
+    <!-- Bootstarp Javascript Cdn link -->
+    <script src="./js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper javascript cdn link -->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- Javscript file link -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

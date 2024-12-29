@@ -1,0 +1,112 @@
+<!-- Navigation bar start 05-12-2024 -->
+<div class="overflow-hidden">
+    <nav class="navbar navbar-expand-lg bg-black position-fixed w-100 top-0" style="z-index: 999;">
+        <div class="navigation container align-items-center py-2">
+            <a class="navbar-brand" href="/"><img src="./img/logo.svg" alt="logo" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasNavbarLabel" class="offcanvas-title">
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="/img/logo.svg" alt="logo" class="img-fluid" />
+                        </a>
+                    </h5>
+                    <button type="button" class="btn-close img-color" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 forex-nav-bar">
+                        <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/priceplan.html">Price Plan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/refferal.html">Referral</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contactus.html">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex justify-content-md-between justify-content-between align-items-center gap-3">
+                        <div class="d-flex gap-3">
+                            <a class="login-signup-btn py-2 px-3 rounded-2" href="/login.html"><span
+                                    style="vertical-align: middle;" class="nav-btn-text-responsive">Login</span></a>
+                            <a class=" login-signup-btn py-2 px-3 rounded-2" href="/login.html?tab=register">
+                                Sign Up</span></a>
+                        </div>
+                        <div>
+                            <div class="nav-settin-ic d-flex justify-content-center align-items-center d-none">
+                                <a href="/edit.html">
+                                    <img src="img/nav-setting-ic.svg" alt="nav-setting-ic" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-none">
+                            <button id="toggle-mode" class=" btn-light-mode bg-transparent border-0 p-0">
+                                <i class="fas fa-sun"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navigation bar End 05-12-2024 -->
+<script>
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.forex-nav-bar li a');
+
+    // Get the current page URL
+    const currentPath = window.location.pathname;
+
+    // Loop through all nav links and set the active class
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            // Remove active class from all links
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            // Add active class to the current link
+            link.classList.add('active');
+        }
+    });
+
+    $(document).ready(function () {
+        const modeClasses = [
+            { selector: 'body', light: 'light-mode', dark: 'dark-mode' },
+            { selector: '.navigation', light: 'navbar-light', dark: 'navbar-dark' },
+            { selector: '.hero-section-bg', light: 'hero-light-mode', dark: 'hero-dark-mode' },
+            { selector: '.hero-section-content p', light: 'hero-content-light-mode', dark: 'hero-content-dark-mode' },
+            { selector: '.text-off-white', light: 'text-off-light-mode', dark: 'text-off-dark-mode' },
+            { selector: '.text-white', light: 'text-off-light-mode', dark: 'text-off-dark-mode' },
+            { selector: '.our-team-name-bg', light: 'our-team-bg-light-mode', dark: 'our-team-bg-dark-mode' },
+            { selector: '.dropdown-content', light: 'dropdown-content-light-mode', dark: 'dropdown-content-dark-mode' },
+            { selector: '.demo-pro-select', light: 'demo-pro-light-select', dark: 'demo-pro-dark-select' },
+            { selector: '.order-pills', light: 'order-pills-light', dark: 'order-pills-dark' },
+            { selector: '.close-open-order-txt', light: 'close-open-order-txt-light', dark: 'close-open-order-txt-dark' },
+            { selector: '.img-color', light: 'img-color-light', dark: 'img-color-dark' },
+            { selector: '.csv-download-btn', light: 'csv-download-btn-light', dark: 'csv-download-btn-dark' },
+            { selector: '.close-open-order-table', light: 'close-open-order-table-light', dark: 'close-open-order-table-dark' },
+            { selector: '.form-info', light: 'form-info-light', dark: 'form-info-dark' },
+            { selector: '.demo-pro-id-select', light: 'demo-pro-id-select-light', dark: 'demo-pro-id-select-dark' },
+            { selector: '.progress-1', light: 'progress-1-light', dark: 'progress-1-dark' },
+            { selector: '.progress-2', light: 'progress-2-light', dark: 'progress-2-dark' },
+            { selector: '.period-box', light: 'period-box-light', dark: 'period-box-dark' },
+            { selector: '.status-content', light: 'status-content-light', dark: 'status-content-dark' },
+            { selector: '.border-white', light: 'border-off-light-mode', dark: 'border-off-dark-mode' }
+        ];
+
+        $('#toggle-mode').click(function () {
+            const isDarkMode = $('body').hasClass('dark-mode');
+            const newMode = isDarkMode ? 'light' : 'dark';
+
+            modeClasses.forEach(({ selector, light, dark }) => {
+                $(selector).removeClass(isDarkMode ? dark : light).addClass(isDarkMode ? light : dark);
+            });
+
+            $('#toggle-mode')
+                .removeClass(isDarkMode ? 'btn-dark-mode' : 'btn-light-mode')
+                .addClass(isDarkMode ? 'btn-light-mode' : 'btn-dark-mode')
+                .html(isDarkMode ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>');
+        });
+    });
+</script>

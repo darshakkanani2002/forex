@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex  Edit Profile Page</title>
+
+    <!-- Bootstaro Cdn Link -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Swiper js Cdn Link -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="py-4 dark-mode">
+
+    <div>
+        <nav class="navbar navbar-expand-lg position-fixed w-100 z-3">
+            <div class="navigation container navbar-dark bg-dark align-items-center py-2">
+                <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo" class="img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasNavbarLabel" class="offcanvas-title">
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                                <img src="/img/logo.svg" alt="logo" class="img-fluid" />
+                            </a>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 forex-nav-bar pe-lg-5 pe-md-0 pe-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Referral Program</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">History of Orders</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Plan Details</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Edit Proflie</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        </ul>
+                        <div class="d-flex justify-content-md-between justify-content-between">
+                            <div>
+                                <button id="toggle-mode" class="btn btn-light-mode">
+                                    <i class="fas fa-sun"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid spacer">
+        <div class="container">
+            <div class="hero-section-bg hero-dark-mode px-lg-5 px-md-3 px-sm-3 px-3  py-4 navbar-dark">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-12">
+                        <div class="text-center">
+                            <div class="edit-img-border d-flex m-auto justify-content-center align-items-center mb-4">
+                                <div>
+                                    <div class="d-flex justify-content-center">
+                                        <img src="./img/upload-img.png" alt="Profile Picture"
+                                            class="img-fluid profile-picture" id="uploadArea" style="cursor: pointer;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-container text-center">
+                                <input type="file" id="fileUpload" class="d-none" accept="image/*">
+                            </div>
+                            <h4 class="text-white">Profile Picture</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <div class="Form-section-content">
+                            <form>
+                                <div class="form-info px-2 px-md-3 edit-form">
+                                    <div class="row gy-lg-5 gy-md-4 gy-4">
+                                        <div class="col-12 col-md-6">
+                                            <div>
+                                                <label for="first-name" class="text-white ">First Name</label>
+                                                <input type="text" class="form-control text-off-white" id="first-name"
+                                                    placeholder="Enter Your Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div>
+                                                <label for="first-name" class="text-white">Last Name</label>
+                                                <input type="text" class="form-control text-off-white" id="last-name"
+                                                    placeholder="Enter Your Surname">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div>
+                                                <label for="email" class="text-white">Email</label>
+                                                <input type="email" class="form-control text-off-white" id="email"
+                                                    placeholder="Enter Your Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div>
+                                                <label for="phone" class="text-white">Phone</label>
+                                                <input type="number" class="form-control text-off-white user-input"
+                                                    id="phone" placeholder="Enter Your Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div>
+                                                <label for="Country" class="text-white">Country</label>
+                                                <input type="text" class="form-control text-off-white" id="country"
+                                                    placeholder="Enter Your Country">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="position-relative">
+                                                <label for="password" class="text-white">Password</label>
+                                                <input type="password" class="form-control text-off-white"
+                                                    id="register-password" placeholder="Enter Password">
+                                                <span
+                                                    class=" togglePassword position-absolute end-0 translate-middle-y me-3">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="position-relative">
+                                                <label for="confirm-password" class="text-white">Confirm
+                                                    Password</label>
+                                                <input type="password" class="form-control text-off-white"
+                                                    id="confirm-password" placeholder="Confirm Password">
+                                                <span
+                                                    class=" togglePassword position-absolute end-0 translate-middle-y me-3">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit"
+                                                class="btn btn-primary py-3 px-5 submit-btn color-white">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery Cdn Link -->
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // =======9-12-2024=======harsh
+
+        // Trigger file input when the image is clicked
+        document.getElementById('uploadArea').addEventListener('click', function () {
+            document.getElementById('fileUpload').click(); // Simulate a click on the file input
+        });
+
+        // Handle the file selection and update the profile picture
+        document.getElementById('fileUpload').addEventListener('change', function (event) {
+            const file = event.target.files[0]; // Get the selected file
+            if (file && file.type.startsWith('image/')) { // Ensure the file is an image
+                const reader = new FileReader(); // Create a FileReader instance
+
+                // When the file is read, update the image src
+                reader.onload = function (e) {
+                    const image = document.getElementById('uploadArea');
+                    image.src = e.target.result; // Set the Data URL as the image source
+                };
+
+                reader.readAsDataURL(file); // Read the file as a Data URL
+            } else {
+                alert('Please select a valid image file.');
+            }
+        });
+
+        //-------show password---------- login page--------------
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const togglePasswordButtons = document.querySelectorAll('.togglePassword'); // Select all toggle buttons
+
+            togglePasswordButtons.forEach((togglePassword) => {
+                togglePassword.addEventListener('click', function () {
+                    // Find the associated password input
+                    const passwordField = this.previousElementSibling; // Get the input field adjacent to the toggle button
+
+                    if (passwordField) {
+                        // Toggle the password visibility
+                        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordField.setAttribute('type', type);
+
+                        // Toggle the eye icon
+                        const icon = this.querySelector('i');
+                        if (icon) {
+                            if (type === 'text') {
+                                icon.className = 'fa-regular fa-eye-slash'; // Change to "eye-slash" when visible
+                            } else {
+                                icon.className = 'fa-regular fa-eye'; // Change to "eye" when hidden
+                            }
+                        }
+                    } else {
+                        console.error('Password input field not found');
+                    }
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $('#toggle-mode').click(function () {
+                if ($('body').hasClass('dark-mode')) {
+                    // Switch to Light Mode
+                    $('body').removeClass('dark-mode').addClass('light-mode');
+                    $('.navigation').removeClass('navbar-dark').addClass('navbar-light');
+                    $('.hero-section-bg').removeClass('hero-dark-mode').addClass('hero-light-mode');
+                    $('.hero-section-content p').removeClass('hero-content-dark-mode').addClass('hero-content-light-mode');
+                    $('.text-off-white ').removeClass('text-off-dark-mode').addClass('text-off-light-mode');
+                    $('.text-white ').removeClass('text-off-dark-mode').addClass('text-off-light-mode');
+                    $('.our-team-name-bg ').removeClass('our-team-bg-dark-mode').addClass('our-team-bg-light-mode');
+                    $('.dropdown-content ').removeClass('dropdown-content-dark-mode').addClass('dropdown-content-light-mode');
+                    $('.demo-pro-select ').removeClass('demo-pro-dark-select').addClass('demo-pro-light-select');
+                    $('.order-pills ').removeClass('order-pills-dark').addClass('order-pills-light');
+                    $('.close-open-order-txt ').removeClass('close-open-order-txt-dark').addClass('close-open-order-txt-light');
+                    $('.img-color ').removeClass('img-color-dark').addClass('img-color-light');
+                    $('.csv-download-btn ').removeClass('csv-download-btn-dark').addClass('csv-download-btn-light');
+                    $('.close-open-order-table ').removeClass('close-open-order-table-dark').addClass('close-open-order-table-light');
+                    $('.form-info ').removeClass('form-info-dark').addClass('form-info-light');
+                    $('.demo-pro-id-select ').removeClass('demo-pro-id-select-dark').addClass('demo-pro-id-select-light');
+                    $('#toggle-mode')
+                        .removeClass('btn-light-mode')
+                        .addClass('btn-dark-mode')
+                        .html('<i class="fas fa-moon"></i>'); // Icon for dark mode
+                } else {
+                    // Switch to Dark Mode
+                    $('body').removeClass('light-mode').addClass('dark-mode');
+                    $('.navigation').removeClass('navbar-light').addClass('navbar-dark');
+                    $('.hero-section-bg').removeClass('hero-light-mode').addClass('hero-dark-mode');
+                    $('.hero-section-content p').removeClass('hero-content-light-mode').addClass('hero-content-dark-mode');
+                    $('.text-off-white ').removeClass('text-off-light-mode').addClass('text-off-dark-mode');
+                    $('.text-white ').removeClass('text-off-light-mode').addClass('text-off-dark-mode');
+                    $('.our-team-name-bg ').removeClass('our-team-bg-light-mode').addClass('our-team-bg-dark-mode');
+                    $('.dropdown-content ').removeClass('dropdown-content-light-mode').addClass('dropdown-content-dark-mode');
+                    $('.demo-pro-select ').removeClass('demo-pro-light-select').addClass('demo-pro-dark-select');
+                    $('.order-pills ').removeClass('order-pills-light').addClass('order-pills-dark');
+                    $('.close-open-order-txt ').removeClass('close-open-order-txt-light').addClass('close-open-order-txt-dark');
+                    $('.img-color ').removeClass('img-color-light').addClass('img-color-dark');
+                    $('.csv-download-btn ').removeClass('csv-download-btn-light').addClass('csv-download-btn-dark');
+                    $('.close-open-order-table ').removeClass('close-open-order-table-light').addClass('close-open-order-table-dark');
+                    $('.form-info ').removeClass('form-info-light').addClass('form-info-dark');
+                    $('.demo-pro-id-select ').removeClass('demo-pro-id-select-light').addClass('demo-pro-id-select-dark');
+                    $('#toggle-mode')
+                        .removeClass('btn-dark-mode')
+                        .addClass('btn-light-mode')
+                        .html('<i class="fas fa-sun"></i>'); // Icon for light mode
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstarp Javascript Cdn link -->
+    <script src="./js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper javascript cdn link -->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- Javscript file link -->
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

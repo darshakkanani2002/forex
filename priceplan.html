@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Price Plan Page</title>
+    <!-- Bootstaro Cdn Link -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font awsome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper js Cdn Link -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="py-4 dark-mode">
+    <!-- Navigation bar start 06-12-2024 -->
+    <div id="navbar"></div>
+    <!-- Navigation bar End 06-12-2024 -->
+
+    <!-- Price Plan Section start 06-12-2024 -->
+    <div class="container-fluid spacer fade show" id="price-plan-section">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div
+                    class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-md-3 mb-3 order-lg-1 order-md-1 order-1 welcom-forex-img">
+                    <div class="hero-section-bg hero-dark-mode px-lg-4 px-md-4 px-sm-4 px-3  py-4 navbar-dark">
+                        <div class="plan-price-border">
+                            <h4 class="text-white text-uppercase fs-22 mb-4">Individual</h4>
+                            <p class="text-capitalize text-off-white fw-medium mb-4"><span
+                                    class="text-blue fs-26 fw-semibold" style="vertical-align: middle;">$9</span> /
+                                monthly</p>
+                        </div>
+
+                        <div class="my-5">
+                            <ul class="mb-0 list-unstyled">
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Weekly online meeting</span>
+                                    </a>
+                                </li>
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Unlimited learning access</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">24/7 technical support</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Personal training</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-5">
+                            <a>
+                                <button class="price-plan-choose-btn our-team-bg-dark-mode w-100 py-2 rounded fs-20"
+                                    onclick="showPlanDetail('Individual')">Choose
+                                    Plan</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-md-3 mb-3 order-lg-2 order-md-3 order-3">
+                    <div class="hero-section-bg hero-dark-mode px-lg-4 px-md-4 px-sm-4 px-3  py-4 navbar-dark">
+                        <div class="plan-price-border">
+                            <h4 class="text-white text-uppercase fs-22 mb-5">Team</h4>
+                            <p class="text-capitalize text-off-white fw-medium mb-4"><span
+                                    class="text-blue fs-26 fw-semibold" style="vertical-align: middle;">$29</span> /
+                                monthly</p>
+                        </div>
+
+                        <div class="my-5">
+                            <ul class="mb-0 list-unstyled">
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Weekly online meeting</span>
+                                    </a>
+                                </li>
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Unlimited learning access</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">24/7 technical support</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Personal training</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Business analysis</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-5">
+                            <a>
+                                <button class="price-plan-choose-btn our-team-bg-dark-mode w-100 py-2 rounded fs-20"
+                                    onclick="showPlanDetail('Team')">Choose
+                                    Plan</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="col-lg-4 col-md-6 col-12 mb-lg-0 mb-md-3 mb-3 order-lg-3 order-md-2 order-2 welcom-forex-img">
+                    <div class="hero-section-bg hero-dark-mode px-lg-4 px-md-4 px-sm-4 px-3  py-4 navbar-dark">
+                        <div class="plan-price-border">
+                            <h4 class="text-white text-uppercase fs-22 mb-4">Professional</h4>
+                            <p class="text-capitalize text-off-white fw-medium mb-4"><span
+                                    class="text-blue fs-26 fw-semibold" style="vertical-align: middle;">$49</span> /
+                                monthly</p>
+                        </div>
+
+                        <div class="my-5">
+                            <ul class="mb-0 list-unstyled">
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Weekly online meeting</span>
+                                    </a>
+                                </li>
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Unlimited learning access</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">24/7 technical support</span>
+                                    </a>
+                                </li>
+
+                                <li class="text-white mb-3">
+                                    <a><span><img src="./img/price-plan-ic.svg" alt="price-plan-ic"></span>
+                                        <span style="vertical-align: sub;" class="ms-2">Personal training</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-5">
+                            <a>
+                                <button class="price-plan-choose-btn our-team-bg-dark-mode w-100 py-2 rounded fs-20"
+                                    onclick="showPlanDetail('Professional')">Choose
+                                    Plan</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Price Plan Section End 06-12-2024 -->
+
+    <!-- Plane Detail Section start 06-12-2024 -->
+    <div class="container-fluid fade spacer" id="plan-detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-lg-0 mb-md-4 mb-4">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="about-experience-bg  px-3  py-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h3 class="text-white fs-22 mb-0 text-uppercase" id="plan-detail-title">
+                                            Professional
+                                        </h3>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                <img src="./img/days-left-ic.svg" alt="days-left-ic" class="img-fluid">
+                                            </div>
+                                            <div class="ms-2">
+                                                <p class="mb-0 text-off-white">10 Days left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-4">
+                                    <div class="col-lg-4">
+                                        <div>
+                                            <p class="text-capitalize text-off-white fw-medium mb-0"><span
+                                                    class="text-blue fs-26 fw-semibold"
+                                                    style="vertical-align: middle;">$49</span> /
+                                                monthly</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div>
+                                            <p class="mb-0 text-off-white fs-14">
+                                                Perfect for independent traders, this plan provides
+                                                essential tools and reso- urces to navigate the dynamic forex market
+                                                effectively.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="hero-section-bg hero-dark-mode  px-3  py-3 navbar-dark">
+                                <div>
+                                    <h5 class="text-white fs-24">Overview</h5>
+                                    <p class="text-off-white">
+                                        The Aishees Pro Plan is designed for serious learners and professionals seeking
+                                        advanced features, personalized support, and premium content to maximize their
+                                        learning experience. This plan offers an enhanced set of tools and resources to
+                                        help
+                                        you achieve your educational goals more effectively and efficiently,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-4">
+                            <div class="hero-section-bg hero-dark-mode  px-3  py-3 navbar-dark">
+                                <div>
+                                    <h5 class="text-white fs-24">Features</h5>
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
+                                            <div>
+                                                <ul class="mb-0 list-unstyled">
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">Weekly
+                                                                online meeting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">Unlimited
+                                                                learning access</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+                                            <div>
+                                                <ul class="mb-0 list-unstyled">
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">24/7
+                                                                technical support</span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">Personal
+                                                                training</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-lg-0 mb-md-4 mb-4">
+                            <div class="hero-section-bg hero-dark-mode  px-3  py-3 navbar-dark">
+                                <div>
+                                    <h5 class="text-white fs-24">Additional Resources</h5>
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-6 col-sm-6 col-12">
+                                            <div>
+                                                <ul class="mb-0 list-unstyled">
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">Interactive
+                                                                Quizzes and Assessments</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">Mentorship
+                                                                Program</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+                                            <div>
+                                                <ul class="mb-0 list-unstyled">
+                                                    <li class="text-white mb-3">
+                                                        <a><span><img src="./img/price-plan-ic.svg"
+                                                                    alt="price-plan-ic"></span>
+                                                            <span style="vertical-align: sub;" class="ms-2">Downloadable
+                                                                Resources</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-section-bg hero-dark-mode  px-3  py-3 navbar-dark">
+                        <!-- for summary -->
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                                <h6 class="mb-0 fs-20">Summary</h6>
+                            </div>
+                            <div>
+                                <p class="mb-0 text-off-white fs-14">Starttim Ay1.2004</p>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- monthaly  and taxt-->
+                            <div class="monthly-tax-border">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <p class="text-off-white mb-0 fs-14">Monthly</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fs-14">$49.90</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <p class="text-off-white mb-0 fs-14">Estimated tax</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fs-14">$0.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- total -->
+                            <div class="monthly-tax-border">
+                                <div class="d-flex justify-content-between align-items-center my-3">
+                                    <div>
+                                        <p class="text-off-white mb-0 fs-14">Total after trial</p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 fs-14">$49.90</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="my-4">
+                                <h6 class="mb-0 fs-20">Billing Address</h6>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-lg-6 mb-3">
+                                    <label class="text-off-white">Country</label>
+                                    <div class="dropdown">
+                                        <div class="dropdown-btn bg-transparent text-white">
+                                            <div class="selected">
+                                                <img id="selected-flag" src="" alt="" style="display: none;">
+                                                <span id="selected-country">Select Country</span>
+                                            </div>
+                                            <span class="icon">▼</span>
+                                        </div>
+                                        <div class="dropdown-content" id="dropdown-content"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <div>
+                                        <label for="zipcode form-lable text-off-white">Zipcode</label><br>
+                                        <input type="number" name="zipcode" id="zipcode"
+                                            class="dropdown zipcode-input text-white" placeholder="Type Here">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <p class="text-off-white pb-3" style="border-bottom: 1px solid #717171;">
+                                        "Alshees is required by law to collect applicable transaction taxes for
+                                        purchases made
+                                        in cestain tax jurisdictions.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method Section -->
+                            <div>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                                    <div>
+                                        <h5 class="text-white mb-0">Payment Method</h5>
+                                    </div>
+                                    <div>
+                                        <button
+                                            class="text-white bg-transparent hero-section-bg hero-dark-mode navbar-dark border-0 px-5 py-3 rounded-pill">
+                                            <i class="fa-solid fa-plus"></i> Add Card</button>
+                                    </div>
+                                </div>
+                                <div class="card-container">
+                                    <div class="hero-section-bg hero-dark-mode navbar-dark d-flex align-items-center p-3 mb-4">
+                                        <input type="radio" name="payment-method" class="form-check-input me-3">
+                                        <div class="card-details">
+                                            <h5 class="mb-0">Natasha Adaline</h5>
+                                            <p class="mb-0">**** **** **** 3418</p>
+                                        </div>
+                                        <img src="img/payment-visa-ic.svg" alt="payment-visa-ic" class="ms-auto img-fluid">
+                                    </div>
+
+                                    <div class="hero-section-bg hero-dark-mode navbar-dark d-flex align-items-center p-3 mb-4">
+                                        <input type="radio" name="payment-method" class="form-check-input me-3">
+                                        <div class="card-details">
+                                            <h5 class="mb-0">Natasha Adaline</h5>
+                                            <p class="mb-0">**** **** **** 8599</p>
+                                        </div>
+                                        <img src="img/patment-card-ic.svg" alt="patment-card-ic"
+                                            class="ms-auto img-fluid">
+                                    </div>
+                                    <div>
+                                        <button class="price-plan-choose-btn our-team-bg-dark-mode w-100 py-3 rounded fs-20">Start Subscribtion</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer start 06-12-2024 -->
+    <div id="footer"></div>
+    <!-- Footer end 06-12-2024 -->
+
+
+    <!-- Jquery Cdn Link -->
+    <script src="./js/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstarp Javascript Cdn link -->
+    <script src="./js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper javascript cdn link -->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- Javscript file link -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
